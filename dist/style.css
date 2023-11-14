@@ -1,0 +1,120 @@
+body {
+    background-color: rgb(255, 250, 209);
+    color: #333;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    margin: 0;
+    padding: 0;
+}
+
+#content {
+    margin: 10px;
+    display: grid;
+    gap: 10px;
+}
+
+.navbar {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.tab {
+    font-size: 1.3em;
+    color: azure;
+    display: grid;
+    justify-items: center;
+    background: rgb(13, 202, 161);
+}
+
+.tab p {
+    margin: 10px;
+}
+
+.main {
+    display: grid;
+    background-color: #fff;
+}
+
+.tab-content {
+    display: grid;
+    padding: 10px;
+    margin: 10px;
+    background-color: rgb(13, 202, 161);
+    color: azure;
+}
+
+#home-content {
+    display: grid;
+    justify-items: center;
+}
+
+.home-content-container {
+    display: grid;
+    max-width: 40%;
+    gap: 10px;
+    justify-items: center;
+    font-size: 1.4em;
+}
+
+#home-content img {
+    border-radius: 10px;
+    width: 100%;
+}
+
+#menu-content {
+    display: grid;
+    gap: 10px;
+    justify-items: center;
+}
+
+.menu-table {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.menu-card {
+    display: grid;
+    gap: 10px;
+    background-color: azure;
+    color: #333;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.menu-card * {
+    margin: 0px;
+}
+
+.menu-card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+#contact-content {
+    display: grid;
+    gap: 10px;
+    justify-items: center;
+}
+
+#contact-content form {
+    display: grid;
+    gap: 10px;
+}
+
+#contact-content form input, textarea {
+    font-family: inherit;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #333;
+}
+
+input[type='Submit'] {
+    background-color: rgb(37, 73, 65);
+    font-size: 1.3em;
+    color: azure;
+    padding: 5px;
+    border-radius: 5px;
+}
