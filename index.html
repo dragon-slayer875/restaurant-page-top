@@ -4,9 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="./main.js" defer></script>
 </head>
 <body>
-    <div class="" id="content"></div>
-    <script src="./main.js"></script>
+    <div class="" id="content">
+        <!--navbar with three tabs: home, menu and contact-->
+        <div class="navbar">
+            <div class="tab" id="home"><p>Home</p></div>
+            <div class="tab" id="menu"><p>Menu</p></div>
+            <div class="tab" id="contact"><p>Contact</p></div>
+        </div>
+        <!--main content-->
+        <div class="main">
+            <div class="tab-content" id="home-content">
+                <div class="home-content-container">
+                <h1>Home</h1>
+                <img src="../src/2150690631.jpg" alt="">
+                <p>Lorem ipsum dolo
+                    r sit amet consectetur adipisicing elit.
+                    Quisquam, voluptates voluptatum. Quisquam
+                    voluptates voluptatum Quisquam voluptates
+                    voluptatum Quisquam voluptates voluptatum
+                    Quisquam voluptates voluptatum Quisquam
+                    voluptates voluptatum Quisquam voluptates
+                    voluptatum Quisquam voluptates voluptatum
+                    Quisquam voluptates voluptatum Quisquam
+                </p>
+                </div>
+            </div>
+            <div class="tab-content" id="menu-content">
+                <h1>Menu</h1>
+                <div class="menu-table">
+                    <div class="menu-card">
+                        <img src="../src/2150690631.jpg" alt="">
+                        <h2>Menu Item</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                    <div class="menu-card">
+                        <img src="../src/2150690631.jpg" alt="">
+                        <h2>Menu Item</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                    <div class="menu-card">
+                        <img src="../src/2150690631.jpg" alt="">
+                        <h2>Menu Item</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                    <div class="menu-card">
+                        <img src="../src/2150690631.jpg" alt="">
+                        <h2>Menu Item</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-content" id="contact-content">
+                <h1>Contact</h1>
+                <form action="">
+                    <input type="text" placeholder="Name">
+                    <input type="text" placeholder="Email">
+                    <textarea name="" id="" cols="50" rows="10" placeholder="Message"></textarea>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
