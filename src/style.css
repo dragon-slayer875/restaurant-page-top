@@ -9,9 +9,12 @@ body {
 }
 
 #content {
-    margin: 10px;
+    padding: 10px;
     display: grid;
+    grid-template-rows: auto 1fr;
     gap: 10px;
+    height: 100vh;
+    box-sizing: border-box;
 }
 
 .navbar {
@@ -26,23 +29,43 @@ body {
     display: grid;
     justify-items: center;
     background: rgb(13, 202, 161);
+    border-radius: 10px;
 }
 
-.tab p {
-    margin: 10px;
+.tab button {
+    background-color: inherit;
+    border: none;
+    color: inherit;
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1.3em;
+    font-family: inherit;
+    border-radius: 10px;
 }
 
 .main {
+    align-self: stretch;
     display: grid;
     background-color: #fff;
+    color: #333;
+    border-radius: 20px;
+    height: 100%;
 }
 
 .tab-content {
     display: grid;
+    grid-template-rows: auto auto;
     padding: 10px;
     margin: 10px;
     background-color: rgb(13, 202, 161);
     color: azure;
+    border-radius: 10px;
+    align-content: center;
+}
+
+.tab-content h1 {
+    margin: 0px;
 }
 
 #home-content {

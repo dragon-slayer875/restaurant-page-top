@@ -1,64 +1,62 @@
-import "./styles.css";
-import { home } from "./home.js";
-import { menu } from "./menu.js";
-import { contact } from "./contact.js";
+import "./style.css";
+import Home from "./home.js";
+import Menu from "./menu.js";
+import Contact from "./contact.js";
 
-(function () {
+(function index() {
     const content = document.getElementById("content");
     const navbar = document.createElement("div");
     const home = document.createElement("div");
     const menu = document.createElement("div");
     const main = document.createElement("div");
     const contact = document.createElement("div");
-    const homeText = document.createElement("p");
-    const menuText = document.createElement("p");
-    const contactText = document.createElement("p");
+    const homeButton = document.createElement("button");
+    const menuButton = document.createElement("button");
+    const contactButton = document.createElement("button");
 
     navbar.classList.add("navbar");
     home.classList.add("tab");
     home.classList.add("active");
-    home.setAttribute("id", "home");
+    home.setAttribute("id", "Home");
     menu.classList.add("tab");
-    menu.setAttribute("id", "menu");
+    menu.setAttribute("id", "Menu");
     contact.classList.add("tab");
-    contact.setAttribute("id", "contact");
-    homeText.textContent = "Home";
-    menuText.textContent = "Menu";
-    contactText.textContent = "Contact";
+    contact.setAttribute("id", "Contact");
+    homeButton.textContent = "Home";
+    menuButton.textContent = "Menu";
+    contactButton.textContent = "Contact";
     main.classList.add("main");
 
-    home.appendChild(homeText);
-    menu.appendChild(menuText);
-    contact.appendChild(contactText);
+    home.appendChild(homeButton);
+    menu.appendChild(menuButton);
+    contact.appendChild(contactButton);
     navbar.appendChild(home);
     navbar.appendChild(menu);
     navbar.appendChild(contact);
     content.appendChild(navbar);
     content.appendChild(main);
 
-    main.appendChild(home());
+    main.appendChild(Home());
 
-    home.addEventListener("click", () => {
-        main.innerHTML = "";
-        main.appendChild(home());
+    const tabs = document.querySelectorAll(".tab");
+    tabs.forEach((tab) => {
+        tab.addEventListener("click", () => {
+            main.innerHTML = "";
+            tabs.forEach((tab) => {
+                tab.classList.remove("active");
+            });
+            tab.classList.add("active");
+            switch (tab.id) {
+                case "Home":
+                    main.appendChild(Home());
+                    break;
+                case "Menu":
+                    main.appendChild(Menu());
+                    break;
+                case "Contact":
+                    main.appendChild(Contact());
+                    break;
+            }
+        });
     });
-
-    menu.addEventListener("click", () => {
-        main.innerHTML = "";
-        main.appendChild(menu());
-    });
-
-    contact.addEventListener("click", () => {
-        main.innerHTML = "";
-        main.appendChild(contact());
-    });
-
-    // const tabs = document.querySelectorAll(".tab");
-    // tabs.forEach((tab) => {
-    //     tab.addEventListener("click", () => {
-    //         main.innerHTML = "";
-    //         main.appendChild(tab.id);
-    //     });
-    // });
-    
 })();

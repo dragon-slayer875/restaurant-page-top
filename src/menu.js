@@ -5,7 +5,8 @@ export default function Menu() {
     const menuTable = document.createElement("div");
     const menuCard = document.createElement("div");
     const menuItemImg = new Image();
-    const menuHeading = document.createElement("h2");
+    const menuHeading = document.createElement("h1");
+    const menuItemHeading = document.createElement("h2");
     const menuText = document.createElement("p");
 
     menuItemImg.src = Img;
@@ -14,13 +15,15 @@ export default function Menu() {
     menuContent.setAttribute("id", "menu-content");
     menuTable.classList.add("menu-table");
     menuCard.classList.add("menu-card");
-    menuHeading.textContent = "Menu Item";
+    menuHeading.textContent = "Choose Whatever you want!";
+    menuItemHeading.textContent = "Menu Item";
     menuText.textContent =
         "Lorem ipsum dolor sit amet consectetur adipisicing elit.";
 
+    menuContent.appendChild(menuHeading);
     menuContent.appendChild(menuTable);
     menuCard.appendChild(menuItemImg);
-    menuCard.appendChild(menuHeading);
+    menuCard.appendChild(menuItemHeading);
     menuCard.appendChild(menuText);
     for (let i = 0; i < 4; i++) {
         menuTable.appendChild(menuCard.cloneNode(true));
