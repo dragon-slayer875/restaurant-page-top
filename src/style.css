@@ -118,3 +118,7 @@ input[type='Submit'] {
     padding: 5px;
     border-radius: 5px;
 }
+
+.active {
+    background-color: rgb(37, 73, 65);
+}
